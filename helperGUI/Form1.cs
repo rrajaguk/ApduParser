@@ -31,6 +31,7 @@ namespace helperGUI
             TreeNode mainNode = new TreeNode(env.Tag);
             string[] mainNodeContent = new string[] {env.Length.ToString(), env.Value,env.Description};
             mainNode.Tag = mainNodeContent;
+            treeViewColumns1.TreeView.Nodes.Clear();
             treeViewColumns1.TreeView.Nodes.AddRange(new TreeNode[] { mainNode });
 
             TreeNode last= null;
@@ -43,10 +44,6 @@ namespace helperGUI
                 mainNode.Nodes.Add(TN);
                 last = TN;
             }
-            //TreeNode GG = new TreeNode(" ");
-            //string[] memberGG = new string[] { "", "", "aa", "aaa" };
-            //GG.Tag = memberGG;
-            //last.Nodes.Add(GG);
         }
 
     }
