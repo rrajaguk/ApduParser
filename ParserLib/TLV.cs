@@ -35,7 +35,7 @@ namespace ParserLib
             {
                 result = val.First();
                 List<TLV> childs = APDU.Parse(result.Value);
-                if (childs.Count > 0)
+                if (childs!= null && childs.Count > 0)
                 {
                     foreach (var child in childs)
                     {

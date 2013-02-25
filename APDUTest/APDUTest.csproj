@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -56,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SMS\TPDATest.cs" />
     <Compile Include="TLVTest.cs" />
+    <Compile Include="TreeViewAdapter\TreeViewAdapterTest.cs" />
     <Compile Include="UtilTest\BER_TLVTest.cs" />
     <Compile Include="UtilTest\StringStackTest.cs" />
   </ItemGroup>
@@ -63,6 +65,10 @@
     <ProjectReference Include="..\ParserLib\ParserLib.csproj">
       <Project>{bde25a60-83dd-4660-b68a-02f7eb8aafd1}</Project>
       <Name>ParserLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreeViewColumnsProject\TreeViewColumnsProject.csproj">
+      <Project>{c8a3cb93-f1b0-4f02-acc6-d5e382c7860a}</Project>
+      <Name>TreeViewColumnsProject</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

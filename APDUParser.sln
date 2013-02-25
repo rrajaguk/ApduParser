@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APDUTest", "APDUTest\APDUTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "helperGUI", "helperGUI\helperGUI.csproj", "{694C0703-6944-4041-BDE9-42A3A14D8F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewColumnsProject", "..\TreeViewColumnsSolution\TreeViewColumnsProject\TreeViewColumnsProject.csproj", "{C8A3CB93-F1B0-4F02-ACC6-D5E382C7860A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewColumnsProject", "TreeViewColumnsProject\TreeViewColumnsProject.csproj", "{C8A3CB93-F1B0-4F02-ACC6-D5E382C7860A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
