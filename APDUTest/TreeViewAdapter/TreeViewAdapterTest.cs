@@ -22,10 +22,10 @@ namespace APDUTest.TreeViewAdapter
             TreeNode res = DataConverter.fromTLV(data);
             Assert.AreEqual("AB", res.Name);
 
-            Assert.IsInstanceOfType(res.Tag,typeof(List<string>));
-            List<string> nodeContent = (List<string>)res.Tag;
-            Assert.Equals("1", nodeContent[0]);
-            Assert.Equals("aa", nodeContent[1]);
+            Assert.IsInstanceOfType(res.Tag,typeof(string[]));
+            string[] nodeContent = (string[])res.Tag;
+            Assert.AreEqual("01", nodeContent[0]);
+            Assert.AreEqual("aa", nodeContent[1]);
             
         }
 
@@ -58,11 +58,11 @@ namespace APDUTest.TreeViewAdapter
         {
 
             Assert.AreEqual(expected.Tag, actual.Name);
-            List<string> nodeContent3 = (List<string>)actual.Tag;
+            string[] nodeContent3 = (string[])actual.Tag;
 
-            Assert.IsInstanceOfType(actual.Tag, typeof(List<string>));
-            Assert.Equals(expected.Length.ToString(),nodeContent3[0]);
-            Assert.Equals(expected.Value,nodeContent3[1]);
+            Assert.IsInstanceOfType(actual.Tag, typeof(string[]));
+            Assert.AreEqual(makeEven(expected.Length.ToString()),nodeContent3[0]);
+            Assert.AreEqual(expected.Value, nodeContent3[1]);
         }
 
 
@@ -92,6 +92,16 @@ namespace APDUTest.TreeViewAdapter
             Assert.AreEqual(1,res.Nodes[0].Nodes.Count);
             assertTreeNodeAndTLV(grandChild, res.Nodes[0].Nodes[0]);
 
+        }
+
+        public string makeEven(string val)
+        {
+            string result = val;
+            if (val.Length % 2 != 0)
+            {
+                result= "0" + val;
+            }
+            return result;
         }
         
     }
