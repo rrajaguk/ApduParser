@@ -27,7 +27,12 @@ namespace helperGUI
         private void button1_Click(object sender, EventArgs e)
         {
             treeViewColumns1.TreeView.Nodes.Clear();
-            treeViewColumns1.TreeView.Nodes.AddRange(new TreeNode[] {DataConverter.fromTLV(TLV.parse(SourceTextBox.Text))});
+            
+            TreeNode[] result = DataConverter.fromMultipleTLV(APDU.ParseMultipleTLV(SourceTextBox.Text)) ;
+            if (result[0] != null)
+            {
+                treeViewColumns1.TreeView.Nodes.AddRange(result);
+            }
         }
 
     }

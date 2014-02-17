@@ -8,7 +8,16 @@ namespace ParserLib
 {
     public class APDU
     {
+        public static List<TLV> ParseMultipleTLV(string value)
+        {
+            List<TLV> result = APDU.Parse(value);
+            foreach (var item in result)
+            {
+                item.addChild(TLV.parse(item.Value));
+            }
 
+            return result;
+        }
         public static List<TLV> Parse(string value)
         {
             List<TLV> result  = null;

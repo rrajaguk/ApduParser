@@ -10,9 +10,23 @@ namespace TreeViewColumnsProject
 {
     public class DataConverter
     {
+        public static TreeNode[] fromMultipleTLV(List<TLV> input)
+        {
 
+            List<TreeNode> result = new List<TreeNode>();
+
+            foreach (var item in input)
+            {
+                result.Add(fromTLV(item));
+            }
+
+            return result.ToArray();
+        }
         public static TreeNode fromTLV(TLV data)
         {
+            if (data == null) {
+                return null;
+            }
             TreeNode result = new TreeNode(data.Tag);
             result.Name = data.Tag;
             // put the Length, Value, Description
@@ -23,7 +37,10 @@ namespace TreeViewColumnsProject
             if (data.child!= null)
             {
                 foreach(var child in data.child){
-                    result.Nodes.Add(DataConverter.fromTLV(child));
+                    if (child != null)
+                    {
+                        result.Nodes.Add(DataConverter.fromTLV(child));
+                    }
                 }
             }
             return result;

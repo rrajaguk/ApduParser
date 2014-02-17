@@ -30,7 +30,6 @@
         {
             this.SourceTextBox = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.DestinationTextBox = new System.Windows.Forms.RichTextBox();
             this.treeViewColumns1 = new TreeViewColumnsProject.TreeViewColumns();
             this.SuspendLayout();
             // 
@@ -44,7 +43,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(387, 353);
+            this.button1.Location = new System.Drawing.Point(376, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 53);
             this.button1.TabIndex = 2;
@@ -52,18 +51,10 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DestinationTextBox
-            // 
-            this.DestinationTextBox.Location = new System.Drawing.Point(12, 211);
-            this.DestinationTextBox.Name = "DestinationTextBox";
-            this.DestinationTextBox.Size = new System.Drawing.Size(343, 206);
-            this.DestinationTextBox.TabIndex = 3;
-            this.DestinationTextBox.Text = "";
-            // 
             // treeViewColumns1
             // 
             this.treeViewColumns1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(173)))), ((int)(((byte)(179)))));
-            this.treeViewColumns1.Location = new System.Drawing.Point(12, 464);
+            this.treeViewColumns1.Location = new System.Drawing.Point(12, 211);
             this.treeViewColumns1.Name = "treeViewColumns1";
             this.treeViewColumns1.Padding = new System.Windows.Forms.Padding(1);
             this.treeViewColumns1.Size = new System.Drawing.Size(760, 184);
@@ -73,9 +64,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 809);
+            this.ClientSize = new System.Drawing.Size(806, 424);
             this.Controls.Add(this.treeViewColumns1);
-            this.Controls.Add(this.DestinationTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SourceTextBox);
             this.Name = "Form1";
@@ -88,7 +78,6 @@
 
         private System.Windows.Forms.RichTextBox SourceTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox DestinationTextBox;
         private TreeViewColumnsProject.TreeViewColumns treeViewColumns1;
     }
 }

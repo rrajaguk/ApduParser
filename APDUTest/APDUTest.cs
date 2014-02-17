@@ -10,6 +10,12 @@ namespace APDUTest
     public class APDUTest
     {
 
+        [TestMethod]
+        public void MyTestMethod()
+        {
+            List<TLV> result = APDU.ParseMultipleTLV("A00233440203112233A0 05 01 03 A00133");
+          
+        }
         APDU APDU;
         List<TLV> expected;
 
